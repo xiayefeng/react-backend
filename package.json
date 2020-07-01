@@ -6,6 +6,7 @@
     "build:test": "UMI_ENV=test umi build",
     "test": "umi test",
     "lint": "eslint {src,mock,tests}/**/*.{ts,tsx} --fix",
+    "prebuild": "del /f /s /q dist",
     "precommit": "lint-staged"
   },
   "dependencies": {

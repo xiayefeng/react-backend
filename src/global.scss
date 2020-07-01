@@ -1,10 +1,15 @@
 @import "./style/variables";
 @import "./style/mixin";
-html, body, #root {
+html, 
+body, 
+#root {
   height: 100%;
-  font-family: $font;
 }
 
 body {
   margin: 0;
+  font-family: $font;
+  background-color: #f5f6f7;
+  padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
 }

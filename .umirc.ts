@@ -9,7 +9,8 @@ function resolve (dir) {
 const config: IConfig =  {
   treeShaking: true,
   minimizer: 'terserjs',
-  publicPath: '/public/',
+  publicPath: '/',
+  hash: true,
   routes: [
     {
       path: '/',
@@ -20,9 +21,6 @@ const config: IConfig =  {
       ]
     }
   ],
-  exportStatic: {
-    dynamicRoot: true,
-  },
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
@@ -47,9 +45,9 @@ const config: IConfig =  {
   chainWebpack(config, {webpack}){
     // config.resolve.alias.set('@', resolve('src'))
   },
-  alias: {
+  /* alias: {
     '@': resolve('src')
-  },
+  }, */
   define: {
     'process.env.URL': '/api'
   }
