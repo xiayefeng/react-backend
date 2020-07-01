@@ -1,0 +1,10 @@
+@import "./style/variables";
+@import "./style/mixin";
+html, body, #root {
+  height: 100%;
+  font-family: $font;
+}
+
+body {
+  margin: 0;
+}
